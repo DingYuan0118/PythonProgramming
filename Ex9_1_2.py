@@ -52,3 +52,14 @@ restaurant_1.open_restaurant()
 restaurant_2 = Restaurant("Ding", "Chinese Food")
 restaurant_2.set_number_served(11)
 restaurant_2.increment_number_served(11)
+
+class IceCreamStand(Restaurant):
+	def __init__(self, name, type):
+		super().__init__(name, type)
+		self.flavors = ['apple' , 'banana', 'strawberry']
+		
+	def show_flavors(self):
+		print("This restaurant has {0} ,{1} and {2} flavors".format(self.flavors[0],self.flavors[1],self.flavors[2]))
+			
+restaurant_3 = IceCreamStand("Ding", "IceCream")
+restaurant_3.show_flavors()
