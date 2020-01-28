@@ -36,6 +36,7 @@ class Car():
 	def fill_gas_tank(self):
 		self.gas_tank = 20
 		
+		
 class ElectricCar(Car):
 	"""电动汽车的独特之处"""
 	def __init__(self, make, model, year):
@@ -49,6 +50,7 @@ class ElectricCar(Car):
 	
 	def fill_gas_tank(self):
 		print("Electric Car has no gas_tank.")
+		
 
 class Battery():
 	"""一次模拟电动汽车电瓶的简单尝试"""
