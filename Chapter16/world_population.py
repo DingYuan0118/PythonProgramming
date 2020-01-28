@@ -1,6 +1,8 @@
 import json
+
 import pygal
 from pygal.maps.world import World
+from pygal.style import RotateStyle
 
 from country_codes import get_country_code
 #将数据加载到一个列表中
@@ -34,7 +36,9 @@ for country, population in country_population.items():
 #看看每组分别包含多少个国家
 print(len(country_pops_1), len(country_pops_2), len(country_pops_3))
 
-wm = World()
+
+wm_style =RotateStyle('#336699')
+wm = World(style=wm_style)
 wm.title = "World Population in 2010, by Country"
 wm.add('0-10m', country_pops_1)
 wm.add('10-100m', country_pops_2)
