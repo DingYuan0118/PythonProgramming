@@ -13,7 +13,7 @@ with open(filename, 'r') as file_object:
 	pop_data = json.load(file_object)
 
 country_population = {}
-
+error_countries = []
 #打印每个国家2010年的人口数量
 for pop_dict in pop_data:
 	if pop_dict['Year'] == '2010':
@@ -22,6 +22,11 @@ for pop_dict in pop_data:
 		code = get_country_code(country_name)
 		if code:
 			country_population[code] = population
+		else:
+			error_countries.append(country_name)
+
+with open("Error Countries.json", 'w') as file_object:
+	json.dump(error_countries, file_object)
 
 #根据人口数量将所有国家分为三组
 country_pops_1, country_pops_2, country_pops_3 = {}, {} ,{}
