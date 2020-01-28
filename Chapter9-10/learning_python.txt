@@ -1,0 +1,6 @@
+In python you can do 1
+In python you can do 2
+In python you can do 3
+In python you can do 4
+In python you can do 5
+In python you can do 6
